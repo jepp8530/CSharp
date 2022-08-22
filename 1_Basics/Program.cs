@@ -29,10 +29,10 @@ comment
 //float ExampleFloat = 123.21f;
 //string ExampleString = "Example 123";
 #endregion
-
+#region 
 Console.Title = "TES Hansenberg";
 
-#region Variables
+
 Console.WriteLine("Are you ready to start your adventure?");
 
 string answer = Console.ReadLine();
@@ -78,7 +78,7 @@ Console.WriteLine("Where are you from " + myString2 + "?");
 <<<<<<< Updated upstream
 string answer = Console.ReadLine();
 
-Console.WriteLine("...The end...");
+Console.WriteLine("...Your adventure begins now...");
 Console.ReadLine(); //Stops program from exiting until we press a key
 
 #endregion
