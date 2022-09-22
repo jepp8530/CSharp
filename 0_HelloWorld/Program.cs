@@ -34,7 +34,7 @@ Console.ForegroundColor = ConsoleColor.Blue;
 Console.Title = "TES Hansenberg";
 
 Console.ForegroundColor = ConsoleColor.White;
-
+Console.WriteLine("The Elder Scrolls: Hansenberg");
 Console.WriteLine("1. New Game\n" +
                   "2. Load Game\n" +
                   "3. Exit Game\n");
@@ -65,12 +65,16 @@ while (!correctChoice)
 
 Console.WriteLine("Create your character:");
 Thread.Sleep(500);
-Console.WriteLine("Choose your race..." +
-"\n1. Human" +
-"\n2. Elf" +
-"\n3. Orc" +
-"\n4. Dwarf" +
-"\n5. Wolfman");
+Console.WriteLine("Choose your race...");
+
+string[] ethnicity = { "1. Human", "2. Elf", "3. Orc", "4. Dwarf", "5. Wolfman"};
+
+Console.WriteLine(ethnicity[0]);
+Console.WriteLine(ethnicity[1]);
+Console.WriteLine(ethnicity[2]);
+Console.WriteLine(ethnicity[3]);
+Console.WriteLine(ethnicity[4]);
+
 var race = Console.ReadLine();
 var choserace = false;
 while (!choserace)
@@ -132,6 +136,7 @@ while (!chosegender)
 Thread.Sleep(200);
 
 Console.WriteLine("Choose your class...");
+
 List<string> inputStrings = new List<string>();
 inputStrings.Add("1. Warrior");
 inputStrings.Add("2. Thief");
@@ -139,7 +144,8 @@ inputStrings.Add("3. Monk");
 inputStrings.Add("4. Mage");
 inputStrings.Add("5. Assassin");
 
-for(int i = 0; i < inputStrings.Count; i++){
+for (int i = 0; i < inputStrings.Count; i++)
+{
     Console.WriteLine(inputStrings[i]);
 }
 
@@ -168,8 +174,8 @@ while (!chosesetup)
             Console.WriteLine("Please enter a correct value.");
             break;
     }
-    Console.WriteLine("You chose " + setup);
-            if (!chosesetup)
+    Console.WriteLine("You chose class number " + setup);
+    if (!chosesetup)
     {
         setup = Console.ReadLine();
     }
@@ -183,15 +189,89 @@ string name = "This is how to define a string variable!";
 
 name = Console.ReadLine();
 
-Console.WriteLine("Are you ready to start your adventure, " + name);
-
-Console.WriteLine("...Your adventure begins now...");
+Console.WriteLine("Are you ready to start your adventure, " + name + "?");
+string begin = Console.ReadLine();
+var began = false;
+while (!began)
+{
+    switch (begin)
+    {
+        case "Yes":
+            began = true;
+            break;
+        case "No":
+            Console.WriteLine("Well then. Just say when you are ready...");
+            break;
+        case "yes":
+            began = true;
+            break;
+        case "no":
+            Console.WriteLine("Well then. Just say when you are ready...");
+            break;
+        default:
+            Console.WriteLine("I asked, are you ready to start your adventure, " + name + "?.");
+            break;
+    }
+    if (!began)
+    {
+        begin = Console.ReadLine();
+    }
+}
+Console.WriteLine("...Your adventure begins now..." + "\nPress any key to continue");
 Console.ReadLine();
-Console.WriteLine("You awaken in a foreign place with no recolection of arriving. You see that you are on a bed in some kind of bedroom. What will you do?..." +
-"\nLook for a way out." +
-"\nTake a nap."
-);
+string
+myText = "You awaken in a foreign room with no recolection of arriving. You see that you are on a bed in some kind of bedroom. What will you do?...";
+for (int i = 0; i < myText.Length; i++)
+{
+    Console.Write(myText[i]);
+    System.Threading.
+    Thread.Sleep(25);
+}
 
-Console.ReadLine(); //Stops program from exiting until we press a key
 
+Console.WriteLine("\n1. Look for a way out." +
+"\n2. Take a nap.");
+{
+    System.Threading.
+    Thread.Sleep(25);
+    var wokeup = Console.ReadLine();
+    var awaken = false;
+    while (!awaken)
+    {
+        switch (wokeup)
+        {
+            case "1":
+                awaken = true;
+                break;
+            case "2":
+                {
+                    Console.WriteLine("You take a nap." +
+                    "\nWhat will you do now?..." +
+                    "\n1. Look for a way out." +
+                    "\n2. Take a nap.");
+                }
+                break;
+            default:
+                Console.WriteLine("Please pick a choice.");
+                break;
+        }
+        if (!awaken)
+        {
+            wokeup = Console.ReadLine();
+        }
+
+    }
+}    
+
+string
+myText1 = "You see a wooden door at the end of the room and you try to open it. It opens with a loud creak. The room on the other side is very bright and your eyes take a little while to adjust to the new lighting. Once they're adjusted, you see a man standing with his back to you. You walk over to him and tap him on the shoulder. He jumps a little and turns around. His face is old and grimy. His mouth opens and he says" +
+"\nHey, you. You're finally awake.";
+for (int i = 0; i < myText1.Length; i++)
+{
+    Console.Write(myText1[i]);
+    System.Threading.
+    Thread.Sleep(25);
+}
+
+    Console.ReadLine();//Stops program from exiting until we press a key
 #endregion
