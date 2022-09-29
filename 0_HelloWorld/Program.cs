@@ -263,8 +263,8 @@ Console.WriteLine("\n1. Look for a way out." +
     }
 }    
 
-string
-myText1 = "You see a wooden door at the end of the room and you try to open it. It opens with a loud creak. The room on the other side is very bright and your eyes take a little while to adjust to the new lighting. Once they're adjusted, you see a man standing with his back to you. You walk over to him and tap him on the shoulder. He jumps a little and turns around. His face is old and grimy. His mouth opens and he says" +
+
+string myText1 = "You see a wooden door at the end of the room and you try to open it. It opens with a loud creak. The room on the other side is very bright and your eyes take a little while to adjust to the new lighting. Once they're adjusted, you see a man standing with his back to you. You walk over to him and tap him on the shoulder. He jumps a little and turns around. His face is old and grimy. His mouth opens and he says" +
 "\nHey, you. You're finally awake.";
 for (int i = 0; i < myText1.Length; i++)
 {
