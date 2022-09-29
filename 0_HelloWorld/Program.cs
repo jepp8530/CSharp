@@ -30,10 +30,19 @@ comment
 //string ExampleString = "Example 123";
 #endregion
 #region 
-Console.ForegroundColor = ConsoleColor.Blue;
 Console.Title = "TES Hansenberg";
 
-Console.ForegroundColor = ConsoleColor.White;
+void Story(string text, int time = 25)
+{
+    Console.ForegroundColor = ConsoleColor.White;
+    foreach (char c in text)
+    {
+        Console.Write(c);
+        Thread.Sleep(time);
+    }
+    Console.ForegroundColor = ConsoleColor.Red;
+}
+
 Console.WriteLine("The Elder Scrolls: Hansenberg");
 Console.WriteLine("1. New Game\n" +
                   "2. Load Game\n" +
@@ -219,8 +228,7 @@ while (!began)
 }
 Console.WriteLine("...Your adventure begins now..." + "\nPress any key to continue");
 Console.ReadLine();
-string
-myText = "You awaken in a foreign room with no recolection of arriving. You see that you are on a bed in some kind of bedroom. What will you do?...";
+string myText = "You awaken in a foreign room with no recolection of arriving. You see that you are on a bed in some kind of bedroom. What will you do?...";
 for (int i = 0; i < myText.Length; i++)
 {
     Console.Write(myText[i]);
@@ -264,8 +272,7 @@ Console.WriteLine("\n1. Look for a way out." +
 }    
 
 
-string myText1 = "You see a wooden door at the end of the room and you try to open it. It opens with a loud creak. The room on the other side is very bright and your eyes take a little while to adjust to the new lighting. Once they're adjusted, you see a man standing with his back to you. You walk over to him and tap him on the shoulder. He jumps a little and turns around. His face is old and grimy. His mouth opens and he says" +
-"\nHey, you. You're finally awake.";
+string myText1 = "You see a wooden door at the end of the room and you try to open it. It opens with a loud creak. The room on the other side is very bright and your eyes take a little while to adjust to the new lighting. Once they're adjusted, you see a man standing with his back to you. You walk over to him and tap him on the shoulder. He jumps a little and turns around. His face is old and grimy. His mouth opens and he says\n";
 for (int i = 0; i < myText1.Length; i++)
 {
     Console.Write(myText1[i]);
@@ -273,5 +280,7 @@ for (int i = 0; i < myText1.Length; i++)
     Thread.Sleep(25);
 }
 
-    Console.ReadLine();//Stops program from exiting until we press a key
+Story("Hey, you. You're finally awake. You were caught trying to cross the border, right? Walked right into that Imperial ambush.");
+
+Console.ReadLine();//Stops program from exiting until we press a key
 #endregion
